@@ -1,5 +1,8 @@
 #!name=爱奇艺签到
 #!desc=爱奇艺定时签到
+#!homepage=https://github.com/deezertidal
+#!author=Nobyda
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/iqiyi.png
 #Safari浏览器打开 https://m.iqiyi.com/user.html 使用密码登录, 如通知成功获取cookie则可使用该脚本.
 #获取Cookie后, 请将Cookie脚本禁用并移除主机名，以免产生不必要的MITM.
 #脚本将在每天上午9:00执行, 您可以修改执行时间。
