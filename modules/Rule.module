@@ -1,4 +1,5 @@
 #!name=rule
+#!desc=Shadowrocket规则模块
 #!homepage=https://github.com/ZZM365-CN/IOS-Rules
 
 [Rule]
