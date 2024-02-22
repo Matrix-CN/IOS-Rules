@@ -21,7 +21,7 @@ policy_groups:
     - 狮城节点
     - 台湾节点
     flatten: false
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/IconSet/Color/YouTube.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 - select:
     name: Netflix
     policies:
