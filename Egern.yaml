@@ -145,3 +145,7 @@ mitm:
   enabled: true
   ca_p12: egern.p12
   ca_passphrase: egern
+modules:
+- name: 'Sub-Store订阅'
+  url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule
+  enabled: true
