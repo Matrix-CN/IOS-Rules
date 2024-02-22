@@ -141,16 +141,19 @@ rules:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list
     policy: 苹果服务
 - rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_All.list
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list
+    policy: DIRECT
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list
     policy: DIRECT
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaIPs/ChinaIPs.list
     policy: DIRECT
 - rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China.list
     policy: DIRECT
 - rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_Domain.list
     policy: DIRECT
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list
