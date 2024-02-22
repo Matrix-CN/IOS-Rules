@@ -1,5 +1,4 @@
 vif_only: true
-hide_vpn_icon: true
 dns_servers:
 - system
 - 119.29.29.29
@@ -11,6 +10,8 @@ hosts:
 secure_dns:
   servers:
   - https://dns.alidns.com/dns-query
+  - https://dns.google/dns-query
+  - https://doh.pub/dns-query
   ecs: false
   public_ip_lookup_url: ''
 geoip_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb
