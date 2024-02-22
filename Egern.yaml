@@ -1,30 +1,38 @@
+geoip_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb
 policy_groups:
+- external:
+    name: 所有订阅
+    type: select
+    urls:
+    - https://xxx.com
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 - select:
-    name: Proxy
+    name: PROXY
     policies:
     - 所有订阅
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 - select:
     name: Telegram
     policies:
+    - PROXY
     - 香港节点
     - 日本节点
     - 台湾节点
     - 狮城节点
-    flatten: false
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 - select:
     name: YouTube
     policies:
+    - PROXY
     - 香港节点
     - 日本节点
     - 狮城节点
     - 台湾节点
-    flatten: false
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 - select:
     name: Netflix
     policies:
+    - PROXY
     - 香港节点
     - 日本节点
     - 台湾节点
@@ -33,6 +41,7 @@ policy_groups:
 - select:
     name: Disney
     policies:
+    - PROXY
     - 香港节点
     - 日本节点
     - 台湾节点
@@ -42,6 +51,7 @@ policy_groups:
     name: 哔哩哔哩
     policies:
     - DIRECT
+    - PROXY
     - 香港节点
     - 台湾节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
@@ -49,6 +59,7 @@ policy_groups:
     name: 微软服务
     policies:
     - DIRECT
+    - PROXY
     - 香港节点
     - 狮城节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
@@ -56,6 +67,7 @@ policy_groups:
     name: 苹果服务
     policies:
     - DIRECT
+    - PROXY
     - 香港节点
     - 狮城节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
@@ -65,38 +77,29 @@ policy_groups:
     - 所有订阅
     flatten: true
     filter: 港|🇭🇰|香港|HK|Hong
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 - select:
     name: 台湾节点
     policies:
     - 所有订阅
     flatten: true
     filter: 台|🇨🇳|台湾|TW|Tai
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 - select:
     name: 日本节点
     policies:
     - 所有订阅
     flatten: true
     filter: 日|🇯🇵|日本|JP|Japan
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 - select:
     name: 狮城节点
     policies:
     - 所有订阅
     flatten: true
     filter: 坡|🇸🇬|新加坡|狮城|SG|Singapore
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png
-- external:
-    name: 所有订阅
-    type: select
-    urls:
-    - https://xxx.com
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 rules:
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list
-    policy: YouTube
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list
     policy: Disney
@@ -104,14 +107,17 @@ rules:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list
     policy: Netflix
 - rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list
+    policy: Telegram
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list
+    policy: YouTube
+- rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list
     policy: 微软服务
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list
     policy: 哔哩哔哩
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list
-    policy: Telegram
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list
     policy: 苹果服务
@@ -129,19 +135,18 @@ rules:
     policy: DIRECT
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list
-    policy: Proxy
+    policy: PROXY
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy_Domain.list
-    policy: Proxy
-- domain:
-    match: ifconfig.me
-    policy: DIRECT
+    policy: PROXY
 - domain_suffix:
     match: cn
     policy: DIRECT
 - geoip:
     match: CN
     policy: DIRECT
+- default:
+    policy: PROXY
 mitm:
   enabled: true
   ca_p12: egern.p12
