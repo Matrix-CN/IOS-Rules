@@ -25,6 +25,10 @@ policy_groups:
     name: PROXY
     policies:
     - 所有订阅
+    - 香港节点
+    - 日本节点
+    - 台湾节点
+    - 狮城节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 - select:
     name: Telegram
