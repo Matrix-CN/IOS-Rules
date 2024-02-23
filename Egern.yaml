@@ -119,6 +119,9 @@ policy_groups:
     filter: 坡|🇸🇬|新加坡|狮城|SG|Singapore
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 rules:
+- domain_regex:
+    match: ^ad\..*|^ads\..*
+    policy: REJECT
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list
     policy: Disney
@@ -161,6 +164,9 @@ rules:
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy_Domain.list
     policy: PROXY
+- domain:
+    match: ifconfig.me
+    policy: DIRECT
 - domain_suffix:
     match: cn
     policy: DIRECT
