@@ -4,7 +4,7 @@ dns_servers:
 - system
 - 119.29.29.29
 - 233.5.5.5
-- 8.8.4.4
+- 8.8.8.8
 hosts:
   dot.pub: 1.12.12.12
   dns.alidns.com: 223.5.5.5
@@ -159,10 +159,10 @@ rules:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_Domain.list
     policy: DIRECT
 - rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global.list
     policy: PROXY
 - rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy_Domain.list
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global_Domain.list
     policy: PROXY
 - domain:
     match: ifconfig.me
