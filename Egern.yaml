@@ -1,9 +1,9 @@
 vif_only: true
 geoip_db_url: 'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb '
 dns_servers:
-- system
-- 119.29.29.29
+dns_servers:
 - 233.5.5.5
+- 119.29.29.29
 - 8.8.8.8
 hosts:
   dot.pub: 1.12.12.12
