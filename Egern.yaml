@@ -1,5 +1,4 @@
 vif_only: true
-geoip_db_url: 'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb '
 dns_servers:
 dns_servers:
 - 233.5.5.5
@@ -39,57 +38,7 @@ policy_groups:
     - 台湾节点
     - 狮城节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-- select:
-    name: YouTube
-    policies:
-    - PROXY
-    - 香港节点
-    - 日本节点
-    - 狮城节点
-    - 台湾节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-- select:
-    name: Netflix
-    policies:
-    - PROXY
-    - 香港节点
-    - 日本节点
-    - 台湾节点
-    - 狮城节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-- select:
-    name: Disney
-    policies:
-    - PROXY
-    - 香港节点
-    - 日本节点
-    - 台湾节点
-    - 狮城节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png  
-- select:
-    name: 哔哩哔哩
-    policies:
-    - DIRECT
-    - PROXY
-    - 香港节点
-    - 台湾节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
-- select:
-    name: 微软服务
-    policies:
-    - DIRECT
-    - PROXY
-    - 香港节点
-    - 狮城节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-- select:
-    name: 苹果服务
-    policies:
-    - DIRECT
-    - PROXY
-    - 香港节点
-    - 狮城节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+
 - select:
     name: 香港节点
     policies:
@@ -122,12 +71,6 @@ rules:
 - domain_regex:
     match: ^ad\..*|^ads\..*
     policy: REJECT
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list
-    policy: Disney
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list
-    policy: Netflix
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list
     policy: Telegram
@@ -164,15 +107,6 @@ rules:
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global_Domain.list
     policy: PROXY
-- domain:
-    match: ifconfig.me
-    policy: DIRECT
-- domain_suffix:
-    match: cn
-    policy: DIRECT
-- geoip:
-    match: CN
-    policy: DIRECT
 - default:
     policy: PROXY
 mitm:
