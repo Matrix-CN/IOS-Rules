@@ -64,35 +64,35 @@ policy_groups:
 - select:
     name: 🇭🇰 香港节点
     policies:
-    - 所有订阅
+    - 机场订阅
     flatten: true
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 - select:
     name: 🇨🇳 台湾节点
     policies:
-    - 所有订阅
+    - 机场订阅
     flatten: true
     filter: (?i)台|新北|彰化|TW|Taiwan
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 - select:
     name: 🇯🇵 日本节点
     policies:
-    - 所有订阅
+    - 机场订阅
     flatten: true
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 - select:
     name: 🇸🇬 新加坡节点
     policies:
-    - 所有订阅
+    - 机场订阅
     flatten: true
     filter: (?i)新加坡|坡|狮城|SG|Singapore
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 - select:
     name: 🇺🇳 其它地区
     policies:
-    - 所有订阅
+    - 机场订阅
     flatten: true
     filter: (?i)^(?!.*(?:港|HK|hk|Hong Kong|HongKong|hongkong|台|TW|Taiwan|日本|东京|沪日|深日|JP|Japan|新加坡|坡|狮城|SG|Singapore)).*
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
