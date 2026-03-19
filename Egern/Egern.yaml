@@ -44,6 +44,7 @@ policy_groups:
     - 🇯🇵 日本节点
     - 🇨🇳 台湾节点
     - 🇸🇬 新加坡节点
+    - 🇺🇳 其它地区
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 - select:
     name: 苹果服务
@@ -90,7 +91,14 @@ policy_groups:
     flatten: true
     filter: (?i)新加坡|坡|狮城|SG|Singapore
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-
+- select:
+    name: 🇺🇳 其它地区
+    policies:
+    - 所有订阅
+    flatten: true
+    filter: (?i)^(?!.*(?:港|HK|hk|Hong Kong|HongKong|hongkong|台|TW|Taiwan|日本|东京|沪日|深日|JP|Japan|新加坡|坡|狮城|SG|Singapore)).*
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+    
 rules:
 - domain_regex:
     match: ^ad\..*|^ads\..*
