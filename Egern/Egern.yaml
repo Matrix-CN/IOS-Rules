@@ -128,5 +128,6 @@ modules:
 - name: 'Sub-Store订阅'
   url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule
   enabled: true
-  - name: YouTube Enhance
-    url: https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule
+- name: YouTube Enhance
+  url: https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule
+  enabled: true
