@@ -31,15 +31,14 @@ dns:
   
 policy_groups:
 - external:
-    name: 所有订阅
+    name: 机场订阅
     type: select
     urls:
     - https://xxx.com
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 - select:
-    name: PROXY
+    name: 节点选择
     policies:
-    - 所有订阅
     - 🇭🇰 香港节点
     - 🇯🇵 日本节点
     - 🇨🇳 台湾节点
@@ -57,7 +56,6 @@ policy_groups:
 - select:
     name: Telegram
     policies:
-    - PROXY
     - 🇭🇰 香港节点
     - 🇯🇵 日本节点
     - 🇨🇳 台湾节点
@@ -123,9 +121,9 @@ rules:
     policy: DIRECT
 - rule_set:
     match: https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/proxy.txt
-    policy: PROXY
+    policy: 节点选择
 - default:
-    policy: PROXY
+    policy: 节点选择
 
 - generic:
     name: 节点订阅
