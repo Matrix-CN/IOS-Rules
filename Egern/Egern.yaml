@@ -119,6 +119,13 @@ rules:
 - default:
     policy: PROXY
 
+- generic:
+    name: 节点订阅
+    script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/airport_widget.js
+- generic:
+    name: IP
+    script_url: https://raw.githubusercontent.com/Ccccf123/EgernX/refs/heads/main/ip.js
+    
 mitm:
   enabled: true
   ca_p12: egern.p12
